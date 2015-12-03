@@ -1,0 +1,152 @@
+﻿/*----------------------------- DROP DOWN MENU ------------------------------------------*/
+
+#ddmenu
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+
+.underlink
+{
+    display: none;
+}
+
+.masterli
+{
+    color: black;
+    font-family: arial;
+    font-size: 14px;
+    text-align: center;
+    cursor: default;
+    display: inline;
+}
+
+    .masterli a
+    {
+        display: inline-block;
+        width: 100px;
+        color: black;
+        text-decoration: none;
+    }
+
+.menuli, .menuli2, .menuli3, .menuli4, .menuli5
+{
+    color: black;
+    font-family: arial;
+    font-size: 14px;
+    cursor: default;
+    display: inline;
+}
+
+    .menuli a, .menuli2 a, .menuli3 a, .menuli4 a, .menuli5 a
+    {
+        display: inline-block;
+        width: 100px;
+        color: black;
+        text-decoration: none;
+    }
+
+        .menuli a:hover, .menuli2 a:hover, .menuli3 a:hover, .menuli4 a:hover, .menuli5 a:hover
+        {
+            display: inline-block;
+            width: 100px;
+            color: #808080;
+            text-decoration: none;
+        }
+
+.submenu
+{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: silver;
+    list-style-type: none;
+    margin-left: 100px;
+    margin-top: -3px;
+    padding: 10px 10px 3px 10px;
+    line-height: 25px;
+    border-radius: 5px;
+   
+}
+
+    .submenu li
+    {
+        border-top: solid 1px #a5a5a5;
+    }
+
+.submenu2
+{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: silver;
+    list-style-type: none;
+    margin-left: 200px;
+    margin-top: -3px;
+    padding: 10px 10px 3px 10px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+    .submenu2 li
+    {
+        border-top: solid 1px #a5a5a5;
+    }
+
+    .submenu3
+{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: silver;
+    list-style-type: none;
+    margin-left: 300px;
+    margin-top: -3px;
+    padding: 10px 10px 3px 10px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+    .submenu3 li
+    {
+        border-top: solid 1px #a5a5a5;
+    }
+
+ .submenu4
+{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: silver;
+    list-style-type: none;
+    margin-left: 400px;
+    margin-top: -3px;
+    padding: 10px 10px 3px 10px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+    .submenu4 li
+    {
+        border-top: solid 1px #a5a5a5;
+    }
+
+    .submenu5
+{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: silver;
+    list-style-type: none;
+    margin-left: 500px;
+    margin-top: -3px;
+    padding: 10px 10px 3px 10px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+    .submenu5 li
+    {
+        border-top: solid 1px #a5a5a5;
+    }

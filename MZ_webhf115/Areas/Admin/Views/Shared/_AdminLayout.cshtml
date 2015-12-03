@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Areas/Admin/Content/ddMenu/ddmenu.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/style/admin.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>Awesome CMS @ViewBag.Title</title>
+</head>
+<body>
+    <div id="header">
+        <img src="~/Areas/Admin/Content/gfx/Logo.png" />
+    </div>
+    <div id="menu">
+        <asp:Panel ID="pnlMenu" runat="server">
+            <ul id="ddmenu">
+
+                <li class="masterli"><a href="/Home/Index/" target="_blank">Brows</a></li>
+
+                <li class="menuli">
+                    <a href="#">Kategorier</a>
+
+                    <ul class="submenu">
+                        <li><a href="OpretKat.aspx">Opret</a></li>
+                        <li><a href="RedigerKat.aspx">Rediger/Slet</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="menuli2">
+                    <a href="#">Produkter</a>
+
+                    <ul class="submenu2">
+                        <li><a href="OpretProdukt.aspx">Opret</a></li>
+                        <li><a href="RedigerProdukt.aspx">Rediger/slet</a></li>
+
+                    </ul>
+                </li>
+                <li class="menuli3">
+                    <a href="#">Sider</a>
+
+                    <ul class="submenu3">
+                        <li><a href="/Admin/Content/EditContent/1/">Forsiden</a></li>
+                        <li><a href="/Admin/Content/EditContent/2/">Information</a></li>
+
+                    </ul>
+                </li>
+                <li class="menuli4">
+                    <a href="#">Kontakt</a>
+
+                    <ul class="submenu4">
+                        <li><a href="RedigerKontakt.aspx">Kontakt</a></li>
+                        <li><a href="RedigerFormular.aspx?id=1">Formular</a></li>
+
+                    </ul>
+                </li>
+
+                <asp:Literal ID="litBruger" runat="server"></asp:Literal>
+
+            </ul>
+        </asp:Panel>
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="footer">Copyright © 2015 Awesome CMS aps</div>
+
+  
+
+
+    <script src="~/Areas/Admin/Content/ddMenu/ddmenu.js"></script>
+       
+</body>
+</html>

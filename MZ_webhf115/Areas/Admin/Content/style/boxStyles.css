@@ -1,0 +1,58 @@
+﻿.boxWrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    position: relative;
+    top: 30px;
+    z-index: 0;
+}
+
+.boxTop
+{
+    background-color: #353434;
+    height: 27px;
+    padding-left: 3px;
+    padding-top: 3px;
+    min-width: 280px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    vertical-align: middle;
+
+    font-family: arial;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+  
+}
+
+.boxContent
+{
+    padding: 10px;
+    min-width: 278px;
+    min-height: 80px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid 1px #a5a5a5;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: arial;
+    font-size: 14px;
+}
+
+.tandH {
+  vertical-align: middle;  
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.textbox {
+   width:180px;
+}
