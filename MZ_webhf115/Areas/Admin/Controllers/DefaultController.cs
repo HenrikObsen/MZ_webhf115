@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MZ_webhf115.Areas.Admin
 {
-    public class HomeController : Controller
+    public class DefaultController : Controller
     {
         // GET: Admin/Home
         public ActionResult Index()

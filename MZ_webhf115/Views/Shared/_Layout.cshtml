@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using RepoMZ
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -7,68 +8,76 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div id="bannerBox">
+@{
+    KategoriFac kf = new KategoriFac();
+}
+    
+<div id="bannerBox">
+</div>
+<div id="contentWrapper">
+    <div id="vMenu">
+        <div id="vMenuCon">
+            <h1>Kattegorier</h1>
+
+            @foreach (Kategori k in kf.GetAll())
+            {
+                <a href="/Product/Index/@k.ID/">@k.Navn</a><br />
+            }
+
+            
+
+        </div>
+
+        <table id="linkTable">
+            <tr>
+                <td class="linkImgTd"><img src="/Content/GFX/home.jpg"/></td>
+                <td class="linkLinkTd"><a href="" class="Menu">Home</a></td>
+            </tr>
+            <tr>
+                <td class="linkImgTd"><img src="/Content/GFX/Info.jpg"/></td>
+                <td class="linkLinkTd"><a href="" class="Menu">Information</a></td>
+            </tr>
+            <tr>
+                <td class="linkImgTd"><img src="/Content/GFX/print.jpg"/></td>
+                <td class="linkLinkTd"><a href="#" onclick="javascript:window.print();" class="Menu">Print</a></td>
+            </tr>
+            <tr>
+                <td class="linkImgTd"><img src="/Content/GFX/post.jpg"/></td>
+                <td class="linkLinkTd"><a href="" class="Menu">Kontakt</a></td>
+            </tr>
+            <tr>
+                <td class="linkImgTd"><img src="/Content/GFX/mail.jpg"/></td>
+                <td class="linkLinkTd">Email</td>
+            </tr>
+        </table>
+
+
     </div>
-    <div id="contentWrapper">
-        <div id="vMenu">
-            <div id="vMenuCon">
-                <h1>Kattegorier</h1>
+    <div id="hMenu">
+        <div id="hMenuCon">
+            <asp:Panel ID="pnlSoeg" runat="server" DefaultButton="btnSoeg">
+                <form name="myForm" action="/cont/act/" enctype="multipart/form-data" method="post">
+                    <input id="search" type="text" name="search" style="width: 108px;"/>
+                    <br/>
+                    <input type="submit" value="Søg"/>
+                </form>
+                <a href="" class="Menu">Avanceret søg</a>
 
-
-                <a href="/Product/Index/id/">Navn</a><br />
-
-            </div>
-
-            <table id="linkTable">
-                <tr>
-                    <td class="linkImgTd"><img src="/Content/GFX/home.jpg" /></td>
-                    <td class="linkLinkTd"><a href="" class="Menu">Home</a></td>
-                </tr>
-                <tr>
-                    <td class="linkImgTd"><img src="/Content/GFX/Info.jpg" /></td>
-                    <td class="linkLinkTd"><a href="" class="Menu">Information</a></td>
-                </tr>
-                <tr>
-                    <td class="linkImgTd"><img src="/Content/GFX/print.jpg" /></td>
-                    <td class="linkLinkTd"><a href="#" onclick="javascript:window.print();" class="Menu">Print</a></td>
-                </tr>
-                <tr>
-                    <td class="linkImgTd"><img src="/Content/GFX/post.jpg" /></td>
-                    <td class="linkLinkTd"><a href="" class="Menu">Kontakt</a></td>
-                </tr>
-                <tr>
-                    <td class="linkImgTd"><img src="/Content/GFX/mail.jpg" /></td>
-                    <td class="linkLinkTd">Email</td>
-                </tr>
-            </table>
-
-
+            </asp:Panel>
         </div>
-        <div id="hMenu">
-            <div id="hMenuCon">
-                <asp:Panel ID="pnlSoeg" runat="server" DefaultButton="btnSoeg">
-                    <form name="myForm" action="/cont/act/" enctype="multipart/form-data" method="post">
-                        <input id="search" type="text" name="search" style="width:108px;" />
-                        <br />
-                        <input type="submit" value="Søg" />
-                    </form>
-                    <a href="" class="Menu">Avanceret søg</a>
+        <div id="nyhed">
 
-                </asp:Panel>
-            </div>
-            <div id="nyhed">
-
-            </div>
-        </div>
-        <div id="content">
-            @RenderBody()
-        </div>
-        <div id="clear">
         </div>
     </div>
-    <div id="adress">
-        @Html.Raw(@ViewBag.Adress)
+    <div id="content">
+        @RenderBody()
     </div>
+    <div id="clear">
+    </div>
+</div>
+<div id="adress">
+    @Html.Raw(@ViewBag.Adress)
+</div>
 
 </body>
 </html>
