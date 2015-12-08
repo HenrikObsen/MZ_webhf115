@@ -1,0 +1,17 @@
+﻿@using RepoMZ
+@using RepoMZ.Models.ViewModels
+@model ProduktListe
+@{
+    ViewBag.Title = "ProduktListe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Kategori.Navn</h2>
+<ul>
+   @foreach (Produkt p in Model.Produkter)
+   {
+       <li>@p.Navn</li>
+   } 
+</ul>
+
+
