@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Logind</h2>
+
+<form name="myForm" action="/Bruger/Login/" enctype="multipart/form-data" method="post">
+
+    <input id="Email" type="text" name="Email" />
+    <br />
+    <input id="Password" type="text" name="Password" />
+    <br/>
+    <input id="Submit1" type="submit" value="Log-in" />
+    @ViewBag.MSG
+
+    @Crypto.Hash("admin")
+
+</form>
