@@ -1,0 +1,16 @@
+﻿@model RepoMZ.Kategori
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<form name="myForm" action="/Admin/aKategori/AddKat/" enctype="multipart/form-data" method="post">
+    Navn:<input id="Navn" type="text" name="Navn" />
+    <br/>
+    Sortering:<input id="Sortering" type="text" name="Sortering"/>
+    <br/>
+    <input id="Submit1" type="submit" value="Opret"/>
+    @ViewBag.MSG
+</form>
