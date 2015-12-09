@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\aKategoriController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\BrugerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -116,6 +117,10 @@
     <Content Include="Views\Produkt\ProduktListe.cshtml" />
     <Content Include="Views\Bruger\Index.cshtml" />
     <Content Include="Views\Bruger\Secret.cshtml" />
+    <Content Include="Areas\Admin\Views\aKategori\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\aKategori\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\aKategori\EditForm.cshtml" />
+    <Content Include="Areas\Admin\Views\aKategori\EditResult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

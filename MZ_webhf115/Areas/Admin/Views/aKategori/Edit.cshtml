@@ -1,0 +1,18 @@
+﻿@using RepoMZ
+@model List<Kategori>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit Kategories</h2>
+
+
+<ul>
+
+    @foreach (Kategori kat in Model)
+    {
+        <li>@kat.Navn <a href="/Admin/aKategori/EditForm/@kat.ID/">Rediger</a> <a href="/Admin/aKategori/Delete/@kat.ID/">Slet</a></li>
+    }
+
+</ul>

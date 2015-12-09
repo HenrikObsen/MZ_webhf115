@@ -1,0 +1,16 @@
+﻿@model RepoMZ.Kategori
+@{
+    ViewBag.Title = "EditForm";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rediger kategori</h2>
+
+<form name="myForm" action="/Admin/aKategori/EditResult/" enctype="multipart/form-data" method="post">
+    Navn:<input id="Navn" type="text" name="Navn" value="@Model.Navn" />
+    <br />
+    Sortering:<input id="Sortering" type="text" name="Sortering" value="@Model.Sortering"/>
+    <br />
+    <input id="Submit1" type="submit" value="Gem" />
+    @ViewBag.MSG<input id="Hidden1" type="hidden" name="ID" value="@Model.ID" />
+</form>
