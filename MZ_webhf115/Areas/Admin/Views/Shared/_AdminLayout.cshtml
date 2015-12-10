@@ -5,7 +5,7 @@
     <link href="~/Areas/Admin/Content/ddMenu/ddmenu.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Content/style/admin.css" rel="stylesheet" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
+    @RenderSection("head", required: false)
     
     <meta name="viewport" content="width=device-width" />
     <title>Awesome CMS @ViewBag.Title</title>
@@ -24,8 +24,8 @@
                     <a href="#">Kategorier</a>
 
                     <ul class="submenu">
-                        <li><a href="OpretKat.aspx">Opret</a></li>
-                        <li><a href="RedigerKat.aspx">Rediger/Slet</a></li>
+                        <li><a href="/Admin/aKategori/Index/">Opret</a></li>
+                        <li><a href="/Admin/aKategori/Edit/">Rediger/Slet</a></li>
 
                     </ul>
 

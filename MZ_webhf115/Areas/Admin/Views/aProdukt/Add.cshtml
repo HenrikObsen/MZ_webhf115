@@ -1,0 +1,31 @@
+﻿@using RepoMZ
+@model List<RepoMZ.Kategori>
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Add</h2>
+
+<form name="myForm" action="/Admin/aProdukt/AddResult/" enctype="multipart/form-data" method="post">
+
+    Kategori:
+    <select name="KatID">
+        @foreach (Kategori k in Model)
+        {
+            <option value="@k.ID">@k.Navn</option>
+        }
+
+    </select>
+    <br/>
+    Navn: <input id="Text1" type="text" name="Navn" />
+    <br />
+    Pris: <input id="Text1" type="text" name="Pris" />
+    <br />
+    <textarea id="TextArea1" rows="2" cols="20" name="Tekst"></textarea>
+    <br />
+    <input id="File1" type="file" name="fil" />
+    <br />
+    <input id="Submit1" type="submit" value="Gem"/>
+    @ViewBag.MSG
+</form>

@@ -9,26 +9,25 @@ using RepoMZ;
 
 namespace MZ_webhf115.Controllers
 {
-    [Authorize]
+
     public class BrugerController : Controller
     {
         BrugerFac brugerFac = new BrugerFac();
         // GET: Bruger
-        [AllowAnonymous]
+
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public ActionResult Login(string Email, string Password)
         {
             Bruger bruger = brugerFac.Login(Email.Trim(), Crypto.Hash(Password.Trim()));
 
             if (bruger.ID > 0)
             {
-                FormsAuthentication.SetAuthCookie(bruger.ID.ToString(), true);
+                FormsAuthentication.SetAuthCookie(bruger.ID.ToString(), false);
 
                 Session["UserID"] = bruger.ID;
                 Session["Level"] = bruger.Level;

@@ -89,6 +89,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\10P4eXFqv2015ihPJfon12.png" />
+    <Content Include="Content\js\v.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -96,6 +98,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\aKategoriController.cs" />
+    <Compile Include="Areas\Admin\Controllers\aProduktController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\BrugerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -103,6 +106,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Uploader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +125,7 @@
     <Content Include="Areas\Admin\Views\aKategori\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\aKategori\EditForm.cshtml" />
     <Content Include="Areas\Admin\Views\aKategori\EditResult.cshtml" />
+    <Content Include="Areas\Admin\Views\aProdukt\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -134,7 +139,6 @@
     <Folder Include="Areas\Admin\Content\gfx\" />
     <Folder Include="Areas\Admin\Content\style\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepoMZ\RepoMZ.csproj">
