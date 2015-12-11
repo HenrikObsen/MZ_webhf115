@@ -1,19 +1,42 @@
-﻿function validate(form) {
+﻿/* --------- Definere hvad der skal valideres og hvordan -------- */
+
+function validate(form) {
+    /* Holder styr på om formen er valideret */
     var validated = true;
 
-    var sortering = document.forms[form.name]["Sortering"].value;
-    var errSort = document.getElementById("ph_for_sortering");
-    errSort.innerText = "";
-    if (sortering != "") {
-        if (!ValidateInt(sortering)) {
+    /* ------------- Validering af e-mail ------------------ */
+    var email = document.forms[form.name]["Email"].value;
+    var errEmail = document.getElementById("ph_for_email");
+    errEmail.innerText = "";
+    if (email != "") {
+        if (!ValidateEmail(email)) {
             validated = false;
-            errSort.innerText = "Det indtastede er ikke et tal!";
+            errEmail.innerText = "Det indtastede er ikke en e-mail!";
         }
     } else {
         validated = false;
-        errSort.innerText = "Feltet skal udfyldes!";
+        errEmail.innerText = "Feltet skal udfyldes!";
     }
+    /* ------------ Validering af e-mail slut ------------- */
 
+
+    /* ------------- Validering af sortering ------------------ */
+    var postnr = document.forms[form.name]["Postnr"].value;
+    var errPostnr = document.getElementById("ph_for_postnr");
+    errPostnr.innerText = "";
+    if (postnr != "") {
+        if (!ValidateInt(postnr)) {
+            validated = false;
+            errPostnr.innerText = "Det indtastede er ikke et tal!";
+        }
+    } else {
+        validated = false;
+        errPostnr.innerText = "Feltet skal udfyldes!";
+    }
+    /* ------------ Validering af sortering slut ------------- */
+
+
+    /* --------------- Validering af Navn -------------------- */
     var name = document.forms[form.name]["Navn"].value;
     var errName = document.getElementById("ph_for_name");
     errName.innerText = "";
@@ -24,15 +47,13 @@
         validated = false;
         errName.innerText = "Feltet skal udfyldes!";
     }
+    /* ------------ Validering af Navn slut ------------------ */
 
     return validated;
 }
 
 
-
-
-
-/* ------------------------- Valideringsmuligheder -------------------------------------------- */
+/* ------------------------- Valideringsmuligheder ------------------------------ */
 
 function ValidateInt(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);

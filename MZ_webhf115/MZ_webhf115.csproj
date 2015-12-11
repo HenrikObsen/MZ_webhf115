@@ -91,6 +91,7 @@
   <ItemGroup>
     <Content Include="Content\Images\10P4eXFqv2015ihPJfon12.png" />
     <Content Include="Content\js\v.js" />
+    <Content Include="Content\js\ValideretForm.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+    <title>Kunde info</title>
+    <script src="validering.js"></script>
+</head>
+<body>
+    <h2>Kunde info</h2>
+
+    <form name="myForm" enctype="multipart/form-data" method="post" onsubmit="return validate(this);">
+        Navn:<input id="Navn" type="text" name="Navn" />
+        <div id="ph_for_name"></div>
+        <br />
+        Postnr:<input id="Postnr" type="text" name="Postnr" />
+        <div id="ph_for_postnr"></div>
+        <br />
+        Postnr:<input id="Email" type="text" name="Email" />
+        <div id="ph_for_email"></div>
+        <br />
+        <input id="Submit1" type="submit" value="Gem" />
+    </form>
+</body>
+</html>
