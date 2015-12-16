@@ -1,0 +1,14 @@
+﻿@using RepoMZ
+@model RepoMZ.IndholdFac
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Test</h2>
+<ul>
+   @foreach (Indhold i in Model.GetAll())
+   {
+       <li>@i.Overskrift</li>
+   } 
+</ul>

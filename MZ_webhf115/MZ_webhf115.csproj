@@ -90,6 +90,56 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\10P4eXFqv2015ihPJfon12.png" />
+    <Content Include="Content\Images\Bad1.jpg" />
+    <Content Include="Content\Images\Bad2.jpg" />
+    <Content Include="Content\Images\Bad3.jpg" />
+    <Content Include="Content\Images\daglig1.jpg" />
+    <Content Include="Content\Images\daglig2.jpg" />
+    <Content Include="Content\Images\daglig3.jpg" />
+    <Content Include="Content\Images\daglig4.jpg" />
+    <Content Include="Content\Images\daglig5.jpg" />
+    <Content Include="Content\Images\daglig6.jpg" />
+    <Content Include="Content\Images\Daglig7.jpg" />
+    <Content Include="Content\Images\Kontor1.jpg" />
+    <Content Include="Content\Images\Kontor2.jpg" />
+    <Content Include="Content\Images\Kontor3.jpg" />
+    <Content Include="Content\Images\Kontor4.jpg" />
+    <Content Include="Content\Images\Kontor5.jpg" />
+    <Content Include="Content\Images\160\Bad1.jpg" />
+    <Content Include="Content\Images\160\Bad2.jpg" />
+    <Content Include="Content\Images\160\Bad3.jpg" />
+    <Content Include="Content\Images\160\daglig1.jpg" />
+    <Content Include="Content\Images\160\daglig2.jpg" />
+    <Content Include="Content\Images\160\daglig3.jpg" />
+    <Content Include="Content\Images\160\daglig4.jpg" />
+    <Content Include="Content\Images\160\daglig5.jpg" />
+    <Content Include="Content\Images\160\daglig6.jpg" />
+    <Content Include="Content\Images\160\Daglig7.jpg" />
+    <Content Include="Content\Images\160\Kontor1.jpg" />
+    <Content Include="Content\Images\160\Kontor2.jpg" />
+    <Content Include="Content\Images\160\Kontor3.jpg" />
+    <Content Include="Content\Images\160\Kontor4.jpg" />
+    <Content Include="Content\Images\160\Kontor5.jpg" />
+    <Content Include="Content\Images\160\Sove1.jpg" />
+    <Content Include="Content\Images\160\Sove2.jpg" />
+    <Content Include="Content\Images\160\Sove3.jpg" />
+    <Content Include="Content\Images\160\Sove4.jpg" />
+    <Content Include="Content\Images\160\Spise1.jpg" />
+    <Content Include="Content\Images\160\Spise2.jpg" />
+    <Content Include="Content\Images\160\Spise3.jpg" />
+    <Content Include="Content\Images\160\Spise4.jpg" />
+    <Content Include="Content\Images\160\Spise5.jpg" />
+    <Content Include="Content\Images\160\Spise6.jpg" />
+    <Content Include="Content\Images\Sove1.jpg" />
+    <Content Include="Content\Images\Sove2.jpg" />
+    <Content Include="Content\Images\Sove3.jpg" />
+    <Content Include="Content\Images\Sove4.jpg" />
+    <Content Include="Content\Images\Spise1.jpg" />
+    <Content Include="Content\Images\Spise2.jpg" />
+    <Content Include="Content\Images\Spise3.jpg" />
+    <Content Include="Content\Images\Spise4.jpg" />
+    <Content Include="Content\Images\Spise5.jpg" />
+    <Content Include="Content\Images\Spise6.jpg" />
     <Content Include="Content\js\v.js" />
     <Content Include="Content\js\ValideretForm.html" />
     <Content Include="Global.asax" />
@@ -127,6 +177,10 @@
     <Content Include="Areas\Admin\Views\aKategori\EditForm.cshtml" />
     <Content Include="Areas\Admin\Views\aKategori\EditResult.cshtml" />
     <Content Include="Areas\Admin\Views\aProdukt\Add.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Areas\Admin\Views\aProdukt\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\aProdukt\EditForm.cshtml" />
+    <Content Include="Content\Images\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

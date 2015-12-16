@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using RepoMZ;
 
 namespace MZ_webhf115.Controllers
 {
@@ -12,6 +13,13 @@ namespace MZ_webhf115.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Test()
+        {
+            IndholdFac i = new IndholdFac();
+
+            return View(i);
         }
     }
 }

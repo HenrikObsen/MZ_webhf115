@@ -1,0 +1,46 @@
+﻿@using RepoMZ
+@model RepoMZ.Models.ViewModels.EditProduct
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+<form name="myForm" action="/Admin/aProdukt/EditList/" enctype="multipart/form-data" method="post">
+
+    @{
+        int kat = 0;
+
+        if (Model.Produktliste != null)
+        {
+            kat = Model.Produktliste.Kategori.ID;
+        }
+    }
+    <select id="katID" name="KatID" onchange="this.form.submit()">
+
+        @foreach (Kategori k in Model.Kategorier)
+        {
+            if (k.ID == kat)
+            {
+                <option value="@k.ID" selected="selected">@k.Navn</option>
+            }
+            else
+            {
+                <option value="@k.ID">@k.Navn</option>
+            }
+
+        }
+
+    </select>
+</form>
+
+@if (Model.Produktliste != null)
+{
+    foreach (var p in Model.Produktliste.Produkter)
+    {
+        <ul>
+            <li>@p.Navn <a href="/Admin/aProdukt/EditForm/@p.ID">Rediger</a> <a href="/Admin/aProdukt/Delete/@p.ID" onclick="javascript:return confirm('Er du sikker på at du vil slette @p.Navn?');">Slet</a></li>
+        </ul>
+    }
+
+}

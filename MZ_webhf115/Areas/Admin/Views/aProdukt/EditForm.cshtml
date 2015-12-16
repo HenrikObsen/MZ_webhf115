@@ -1,0 +1,42 @@
+﻿@using RepoMZ
+@model RepoMZ.Models.ViewModels.EditProduktForm
+@{
+    ViewBag.Title = "EditForm";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rediger Produkt</h2>
+
+<form name="myForm" action="/Admin/aProdukt/EditResult/" enctype="multipart/form-data" method="post">
+
+    Kategori:
+    <select name="KatID">
+        @foreach (Kategori k in Model.Kategorier)
+        {
+            if (k.ID == Model.Produkt.KatID)
+            {
+                <option value="@k.ID" selected="selected">@k.Navn</option>
+            }
+            else
+            {
+                <option value="@k.ID">@k.Navn</option>
+            }
+        }
+
+    </select>
+    <br />
+    Navn: <input id="Nacn" type="text" name="Navn" value="@Model.Produkt.Navn" />
+    <br />
+    Pris: <input id="Pris" type="text" name="Pris" value="@Model.Produkt.Pris" />
+    <br />
+    <textarea id="Tekst" rows="2" cols="20" name="Tekst">@Model.Produkt.Tekst</textarea>
+    <br/>
+    <img src="/Content/Images/@Model.Produkt.Billede"/>
+    <br/>
+    <input id="fil" type="file" name="fil" />
+    <br/>
+    <input id="Submit1" type="submit" value="Opdater" />
+    @ViewBag.MSG
+    <input id="ID" type="hidden" name="ID" value="@Model.Produkt.ID"/>
+    <input id="Billede" type="hidden" name="Billede" value="@Model.Produkt.Billede" />
+</form>
